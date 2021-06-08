@@ -7,5 +7,5 @@ app.use(express.json());
 app.use(routes);
 
 app.listen(3333, () => {
-	console.log('😳🤝😎👍 SERVER TA NAIC');
+	console.log('😳🤝😎👍 SERVER TA NAICE');
 });
