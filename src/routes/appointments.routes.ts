@@ -24,7 +24,7 @@ appointmentsRouter.post('/', (request, response) => {
 	if (findAppointInSameDate) {
 		return response
 			.status(400)
-			.json({ message: 'This Appointment is already booked, f' });
+			.json({ message: 'This Appointment is already booked' });
 	}
 
 	const appointment = {
