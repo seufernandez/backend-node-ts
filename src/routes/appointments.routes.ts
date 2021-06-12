@@ -14,19 +14,14 @@ appointmentsRouter.get('/', (request, response) => {
 appointmentsRouter.post('/', (request, response) => {
 	const { provider, date } = request.body;
 
-	const parsedDate = startOfHour(parseISO(date));
-
-	const findAppointInSameDate = appointmentsRepository.findByDate(parsedDate);
-
-	if (findAppointInSameDate) {
-		return response
-			.status(400)
-			.json({ message: 'This Appointment is already booked, F buddy' });
-	}
-
-	const appointment = appointmentsRepository.create({ provider, date });
+	const parsedDate = parseISO(date);
 
 	return response.json(appointment);
 });
 
 export default appointmentsRouter;
+
+// 3 MANDAMENTO DA ROTA =
+// - RECEBER A REQUISICAO
+// - CHAMAR UM ARQUIVO PRA TRATAR DAS INFORMACOES DA REQUISICAO
+// - DEVOLVER UMA RESPOSTA
