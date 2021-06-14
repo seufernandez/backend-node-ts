@@ -5,8 +5,8 @@ import AppointmentsRepository from '../repositories/AppointmentsRepository';
 // tasks
 //
 // [x] Recebimento de informações
-// [/] Tratamento de Erros e Excessoes
-// [/] Acesso ao Repositório
+// [x] Tratamento de Erros e Excessoes
+// [x] Acesso ao Repositório
 
 // DEPENDENCY INVERSION
 
